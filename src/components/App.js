@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <div id="main">
         {/* Do not remove the main div */}
-      {this.city.country}=='India'? <li key={this.city.country}>{this.city.name}<li>:"";
+      (this.city.country)=='India'? <li key=(this.city.country)>(this.city.name)<li>:"";
       </div>
     )
   }
