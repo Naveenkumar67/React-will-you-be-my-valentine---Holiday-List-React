@@ -41,6 +41,7 @@ class App extends Component {
     return (
       <div id="main">
         {/* Do not remove the main div */}
+      ({this.city.country}=='India')? {this.city.name}:"";
       </div>
     )
   }
