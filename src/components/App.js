@@ -5,7 +5,6 @@ import '../styles/App.css';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.res=this.res.bind(this);
     this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
@@ -28,8 +27,8 @@ class App extends Component {
         
       <ol>
       {this.cityList.filter((item)=>item.country==='India')
-      .map((city,index)=>(
-        <li key={`location${index+1}`}>{`${city.name}`}</li>
+      .map((cityOb,index)=>(
+        <li key={`location${index+1}`}>{`${cityOb.name}`}</li>
       ))}
       </ol>
       </div>
