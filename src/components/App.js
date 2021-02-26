@@ -5,7 +5,8 @@ import '../styles/App.css';
 class App extends Component {
   constructor(props) {
     super(props)
-
+    this.res=this.res.bind(this);
+    this.arr=this.arr.bind(this);
     this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
@@ -36,17 +37,24 @@ class App extends Component {
     { name: 'Tirupati', country: 'India' },
     ]
   }
+  res(){
+     this.arr=this.city.map((item)=>{
+       if(this.item.country==='India'){
+         return item
+       }
+     })
+     this.setState({cityList:this.arr});
+     console.log(this.cityList);
+  }
 
+  
   render() {
     return (
       <div id="main">
         {/* Do not remove the main div */}
+        
       <ol>
-      for(const prop in this.cityList){
-      if(prop=="India>){
-         <li key=(prop)>this.city[prop]</li>
-    }
-  }
+      {this.res()}
     </ol>
       </div>
     )
