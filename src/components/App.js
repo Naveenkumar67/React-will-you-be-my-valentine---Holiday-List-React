@@ -43,8 +43,8 @@ class App extends Component {
          return item
        }
      })
-     this.setState({cityList:this.arr});
-     console.log(this.cityList);
+     this.cityList=this.arr;
+     
   }
 
   
